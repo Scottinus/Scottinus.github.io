@@ -196,7 +196,7 @@ margin-left: 3.5em;
             - Email (should be a clickable link)
         -->
         <h3>LEAVE US YOUR CONTACT FOR MORE SPECIAL PROMO</h3>
-        <form class ="formBox" action="/action_page.php" method="get" id="contactForm">
+        <form class ="formBox" action="/action_page.php" id="contactForm">
             <p class ="textForm"><strong>Phone</strong></p>
            <div class ="form"><input type="text" name="Phone"><br></div>
            <p class ="textForm"><strong>Date</strong></p>
@@ -205,23 +205,23 @@ margin-left: 3.5em;
            <div class ="form"><input type = "text" name="Name"><br></div>
            <p class ="textForm"><strong>Email</strong></p>
            <div class ="form"><input type = "text" name="Email"><br></div>
-           <input id ="Submit" type="button" onclick="Submit()" value="Submit">
+           <input id ="Submit" type="button" onclick="SubmitInfo()" value="Submit">
           </form>
-    
 
         <script>
             window.onload = function() {
                 console.log("Page loaded!");
-
-                function Submit(){
-                    document.getElementById("contactForm").submit();
-                    console.log(getElementById);
+            }
+                function SubmitInfo(){
+                document.getElementById("contactForm").submit();
                 }
                 /* EXERCISE 9:
                     Write on console the size (height and width) of the current browser window
                     Write on console the size (height and width) of the current page window
                 */
-            };
+               var a =  screen.height;
+                var b =  screen.width; 
+                console.log("window height: "+ a + " window width: " + b);
         </script>
     </body>
 </html>
