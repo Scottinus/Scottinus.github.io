@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day
+- You can ask for tutor's help
+- You can google / use StackOverflow BUT we suggest you to use just the material provided
+- To test the page, just open it with your default browser.
+
+ASSIGNMENT TOPIC
+You are building a Barbers' Shop website. 
+The website is quite simple, it should include the basic information about the Shop (Name, address etc)
+and include a form to get reservation.
+
+Note: the form should just be implemented in HTML + CSS, no extra code needed.
+-->
+<html lang="en">
+    <head>
+    <!-- EXERCISE 1:
+    Specify the title, the charset (UTF-8) and the viewport of the page.
+    -->
+    <title>VALHLALLA - BARBER SHOP</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Luca Sorace">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(34, 33, 28);
+        }
+    h1   
+    {
+        color: blue;
+        text-align: center;
+        }
+        #Logo{
+            position:relative;
+            left : 50%;
+            transform: translate(-50%);
+            width : 30em;
+        
+        }
+    /* EXERCISE 2:  
+       Style h1 color, alignment, size as you like it;
+       Style h2 color, alignment, size as you like it;
+       Style page background color as you like it
+       [EXTRA]
+       Set a red-ish color when the input of the forms are invalid
+       Set a ok-ish color when the input of the forms are valid
+    */
+    .InfoBar{
+        position: relative;
+        display: grid; 
+        grid-template-columns: auto auto auto;
+        background-color :rgb(103,109,128);
+        padding: 10px;
+        border: 1px solid rgb(56, 56, 56);
+    }
+    .InfoBar > div{
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 1px;    
+        text-align: center;
+        font-size: 2em;
+        font-family: Verdana;
+      color : black;
+
+    }
+    h2 {
+        color: white;
+    }
+ p {
+    margin-left: 3em;
+     color: white;
+ }
+
+    .rated{
+        position: relative;
+        display: grid; 
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+    .rated > div{
+    margin-left: 8rem;
+    }
+h3{
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+    background-color:  #A3966F;
+    border-radius: 10px;
+}
+
+.info{
+   position: relative;
+   left: 1em;
+   top: 3.5em;
+}
+.MoreInfo{
+    color: white;
+}
+
+.contacts{
+    font-size : 20px;
+    margin-bottom : 1em;
+}
+.form{
+    margin-bottom : 1em;
+}
+.formBox{
+    position:relative;
+            left : 60%;
+            transform: translate(-50%);
+            width : 30em;
+}
+#Submit{
+margin-left: 3.5em;
+}
+
+.textForm{
+    text-align: center;
+  margin-right: 23em;
+}
+    </style>
+    </head>
+    <body>
+        <!-- EXERCISE 3:
+            Write the main title of the barber shop and a smaller claim.
+        -->
+        <img id ="Logo" src = "VALHALLA.png" alt = "barber shop logo">
+        
+
+        <div class ="InfoBar">
+            <div class="HomeButton">Home</div>
+           <div class="ManButton">Man</div>
+            <div class="WomanButton">Woman</div>
+        </div>
+
+        <!-- EXERCISE 4: 
+            Write a section in which you explain a current promotion
+        -->
+        <img src = "promo.png" alt= "promo image">
+
+        <h2> Most rated </h2>
+
+        <div class = "rated">
+           <div class="1"><img src = "ragnar.png" alt= "ragnar cut" width = "200px"></div>
+           <div class="2"><img src = "rollo.png" alt= "rollo cut" width = "200px"></div>
+           <div class="3"><img src = "dothraki.png" alt= "dothraki cut" width = "200px"></div>
+           <div class="4"><p>THE RAGNAR</p></div>
+           <div class="5"><p>THE ROLLO</p></div>
+           <div class="6"><p>THE DOTHRAKI</p></div>
+           <div class="1"><img src = "Ivar.png" alt= "ivar cut" width = "200px"></div>
+           <div class="2"><img src = "bjorn.png" alt= "bJORN cut" width = "200px"></div>
+           <div class="3"><img src = "lagherta.png" alt= "Lagertha cut" width = "200px"></div>
+           <div class="4"><p>THE IVAR</p></div>
+           <div class="5"><p>THE BJORN</p></div>
+           <div class="6"><p>THE LAGERTHA</p></div>
+        </div>
+    
+        <!-- EXERCISE 5: 
+            Write a section with the address of the shop.
+            [OPTIONAL] Link this address to Google Maps page.
+        -->
+        <h3>HOW YOU CAN FIND US</h3>
+        <ul><div class ="MoreInfo">
+                <li class = "contacts"><strong>Phone number: </strong> +45-69-33-55-75</li>
+                <li class = "contacts"><strong>Email: </strong><a href ="https://www.google.it/">Valhalla-BarberShop@Vinkings.com</a></li>
+            </div></ul>
+            <h2>Now we are on Google Maps</h2>
+            <p class = "info">Livø 9681 Ranum Danimarca</p>
+            <a href = "https://www.google.com/maps/place/Liv%C3%B8/@56.882545,9.0651376,7165m/data=!3m2!1e3!4b1!4m13!1m7!3m6!1s0x464b27b6ee945ffb:0x528743d0c3e092cd!2sDanimarca!3b1!8m2!3d56.26392!4d9.501785!3m4!1s0x4649720d2959ed6f:0xaaddc720ade7a267!8m2!3d56.8923153!4d9.0874663"><img src = "maps.png" width = "50px"></a>
+        <!-- EXERCISE 6: 
+            Write a "Leave Email" form. 
+            The form must have a field for the Email and a button for the submission of the field itself.
+            The field must accept ONLY valid emails (empty email is not a valid email).
+
+            [OPTIONAL] On submit click, console log the value of the email
+        -->
+        <!-- EXERCISE 7: 
+            Create an "book haircut" form.
+            The form must have:
+            - phone number
+            - date
+            - name
+
+            Phone number and date are mandatory, the name is optional.
+            Create a form with a submit button, ready to be used in a real context.
+            Style it as you like it.
+            [OPTIONAL] On submit click, console log an object containing Phone Number, Date and Name.
+        -->
+
+        <!-- EXERCISE 8: 
+            Place here a footer including:
+            - Name of the Barber Shop
+            - Address
+            - Phone Number
+            - Email (should be a clickable link)
+        -->
+        <h3>LEAVE US YOUR CONTACT FOR MORE SPECIAL PROMO</h3>
+        <form class ="formBox" action="/action_page.php" method="get" id="contactForm">
+            <p class ="textForm"><strong>Phone</strong></p>
+           <div class ="form"><input type="text" name="Phone"><br></div>
+           <p class ="textForm"><strong>Date</strong></p>
+           <div class ="form"><input type="text" name="Date"><br></div>
+           <p class ="textForm"><strong>Name</strong></p>
+           <div class ="form"><input type = "text" name="Name"><br></div>
+           <p class ="textForm"><strong>Email</strong></p>
+           <div class ="form"><input type = "text" name="Email"><br></div>
+           <input id ="Submit" type="button" onclick="Submit()" value="Submit">
+          </form>
+    
+
+        <script>
+            window.onload = function() {
+                console.log("Page loaded!");
+
+                function Submit(){
+                    document.getElementById("contactForm").submit();
+                    console.log(getElementById);
+                }
+                /* EXERCISE 9:
+                    Write on console the size (height and width) of the current browser window
+                    Write on console the size (height and width) of the current page window
+                */
+            };
+        </script>
+    </body>
+</html>
