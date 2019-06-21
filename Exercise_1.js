@@ -1,7 +1,6 @@
  
     //====================
     var a = loopUntil(3);
-    //console.log(a);
 var check = false;
     function loopUntil(x){
             var random;
@@ -25,7 +24,7 @@ while(a<b){
         }
         }
       // console.log(arrCheck);
-      console.log(valArray);
+      //console.log(valArray);
 }
 }
         }
