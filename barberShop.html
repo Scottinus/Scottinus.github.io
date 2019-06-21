@@ -50,18 +50,25 @@ Note: the form should just be implemented in HTML + CSS, no extra code needed.
         position: relative;
         display: grid; 
         grid-template-columns: auto auto auto;
-        background-color :rgb(103,109,128);
+        background-color :rgb(57,53,39);
         padding: 10px;
         border: 1px solid rgb(56, 56, 56);
     }
     .InfoBar > div{
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border:solid rgb(123,126,52);
+  border-top : 0px;
+  border-bottom : 0px;
   padding: 1px;    
         text-align: center;
         font-size: 2em;
-        font-family: Verdana;
-      color : black;
+        font-family: sans-serif;
+      color : white;
+      padding-right:2px;
 
+    }
+    .InfoBar >div:hover{
+        background-color : black;
+        opacity : 0.2;
     }
     h2 {
         color: white;
@@ -196,25 +203,33 @@ margin-left: 3.5em;
             - Email (should be a clickable link)
         -->
         <h3>LEAVE US YOUR CONTACT FOR MORE SPECIAL PROMO</h3>
-        <form class ="formBox" action="/action_page.php" id="contactForm">
+        <form class ="formBox" id="contactForm">
             <p class ="textForm"><strong>Phone</strong></p>
-           <div class ="form"><input type="text" name="Phone"><br></div>
+           <div class ="form"><input type="text" id="phone" value=""><br></div>
            <p class ="textForm"><strong>Date</strong></p>
-           <div class ="form"><input type="text" name="Date"><br></div>
+           <div class ="form"><input type="text" id="date" value=""><br></div>
            <p class ="textForm"><strong>Name</strong></p>
-           <div class ="form"><input type = "text" name="Name"><br></div>
+           <div class ="form"><input type="text" id="name" value=""><br></div>
            <p class ="textForm"><strong>Email</strong></p>
-           <div class ="form"><input type = "text" name="Email"><br></div>
+           <div class ="form"><input type="text" id="email" value=""><br></div>
            <input id ="Submit" type="button" onclick="SubmitInfo()" value="Submit">
           </form>
 
         <script>
             window.onload = function() {
+                var x;
                 console.log("Page loaded!");
             }
                 function SubmitInfo(){
-                document.getElementById("contactForm").submit();
+
+              var x =  {
+                  phone:  document.getElementById("phone").value,
+                  date: document.getElementById("date").value,
+                  Name: document.getElementById("name").value,
+                  Email: document.getElementById("email").value 
                 }
+                console.log(x);
+            }
                 /* EXERCISE 9:
                     Write on console the size (height and width) of the current browser window
                     Write on console the size (height and width) of the current page window
